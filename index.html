@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lesion Segmentation | Catalin Fetita et al. </title>
+
+  <style>
+    :root {
+      --text: #111;
+      --muted: #555;
+      --link: #0b57d0;
+      --bg: #fff;
+      --card: #f6f7f9;
+      --border: #e6e8ee;
+      --max: 920px;
+    }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 28px 18px 64px; }
+    .topbar { display:flex; justify-content: space-between; align-items:center; gap: 16px; margin-bottom: 28px; }
+    .home a { color: var(--link); text-decoration:none; font-weight: 600; }
+    h1 { font-size: 2rem; line-height: 1.2; margin: 6px 0 10px; }
+    .authors { color: var(--muted); font-size: 1.02rem; margin-bottom: 10px; }
+    .meta { display:flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 18px; }
+    .pill {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    .links { display:flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 24px; }
+    .btn {
+      display:inline-block;
+      padding: 9px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #fff;
+      text-decoration:none;
+      color: var(--text);
+      font-weight: 600;
+    }
+    .btn.primary { background: var(--link); color: #fff; border-color: var(--link); }
+    h2 { font-size: 1.25rem; margin: 28px 0 10px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+    }
+    figure { margin: 0; }
+    img, video {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+    figcaption { color: var(--muted); font-size: 0.92rem; margin-top: 8px; }
+    .footer { margin-top: 42px; color: var(--muted); font-size: 0.92rem; }
+    .aff { font-style: italic; text-align: center; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+
+    <!-- TITLE -->
+    <center>
+    <h1> Lesion Segmentation and CT biomarkers Definition for Tuberculosis Assessment and Follow-Up </h1>
+    </center>
+
+    <!-- AUTHORS -->
+    <center>
+    <div class="authors">
+      <strong>Catalin Fetita *</strong><sup>1</sup>, Usman Musa Nuhu<sup>2</sup>, Rezkellah-N. Khiati<sup>3</sup> </sup>, Maria Trocan<sup>4</sup> Pierre-Yves Brillet<sup>2,3</sup>
+      <div class="aff">
+        <sup>1</sup>SAMOVAR, Télécom SudParis, Institut Polytechnique de Paris, 91120 Palaiseau, France <br>
+        <sup>2</sup>Avicenne Hospital, AP-HP, Bobigny, France <br>
+        <sup>3</sup>INSERM 1272 Université Sorbonne Paris Nord, Bobigny, France <br>
+        <sup>4</sup>ISEP, Paris, France <br>
+        <sup>5</sup>Keyrus France, Levallois-Perret, France <br>
+
+    </div>
+    </center> 
+
+
+    <!-- META -->
+    <div class="meta">
+      <div class="pill">Conference: SPIE Medical Imaging </div>
+      <div class="pill">Year: 2026</div>
+      <div class="pill">Keywords:  Tuberculosis, CT biomarkers, image segmentation, lung cavities, nodules, vascular remodeling, pulmonary airways </div>
+    </div>
+
+    <!-- LINKS -->
+    <div class="links">
+      <a class="btn primary" href="YOUR_PDF_LINK" target="_blank" rel="noopener">📄 Paper available soon (PDF)</a>
+      <a class="btn" href="YOUR_BIBTEX_LINK_OR_SECTION" >✍️ BibTeX</a>
+    </div>
+
+    <!-- ABSTRACT -->
+    <h2>Abstract</h2>
+    <div class="card">
+      <p>
+        Tuberculosis (TB) is the leading cause of mortality of infectious origin worldwide, with an estimated 10.6 million new cases each year. TB subjects present multiple life-long risks and morbidities: recurrence, post-TB lung diseases (infections, cardiovascular disease and chronic lung disease) and decreased life expectancy. In this context, the purpose of this study is to define CT image biomarkers able to accurately measure tuberculosis lesions, inflammation, and vascular remodeling in order to evaluate the progression of the disease, post-TB sequelae and associated risks. We are focusing on segmentation and investigation of lung airways, vessels, (micro-)nodules, lung cavities and inflammatory/dense opacities to provide a complete panorama of lesions induced by tuberculosis. A unified mixed AI and conventional segmentation pipeline is proposed exploiting the medical knowledge on the morphological properties of anatomical and pathological lung structures in TB. The result is a proof of concept validated on a dataset including 56 diverse TB CTs.
+      </p>
+    </div>
+
+    <!-- VISUAL -->
+    <h2>Qualitative assessment (3D animated rendering)</h2>
+    <div class="card">
+      <figure>
+        <img src="assets/anim_beam.gif" alt="3D animated rendering GIF" width="500" />
+        <figcaption>
+          Case1 - 3D volume rendering (green=normal lung, cyan=airways, red=vessels, yellow=isolated cavities, orange=airway-connected cavities, pink=nodules, blue=dense tissue).
+        </figcaption>
+      </figure>
+    </div>
+	
+	<div class="card">
+      <figure>
+        <img src="assets/anim_ax_beam.gif" alt="Axial slice example GIF" width="500" />
+        <figcaption>
+          Case1 - axial slice examples (green=normal lung, cyan=airways, red=vessels, yellow=isolated cavities, orange=airway-connected cavities, pink=nodules, blue=dense tissue).
+        </figcaption>
+      </figure>
+    </div>
+
+	<div class="card">
+      <figure>
+        <img src="assets/anim_das.gif" alt="3D animated rendering GIF" width="500" />
+        <figcaption>
+          Case2 - 3D volume rendering (green=normal lung, cyan=airways, red=vessels, yellow=isolated cavities, orange=airway-connected cavities, pink=nodules, blue=dense tissue).
+        </figcaption>
+      </figure>
+    </div>
+	
+	<div class="card">
+      <figure>
+        <img src="assets/anim_ax_das.gif" alt="Axial slice example GIF" width="500" />
+        <figcaption>
+          Case2 - axial slice examples (green=normal lung, cyan=airways, red=vessels, yellow=isolated cavities, orange=airway-connected cavities, pink=nodules, blue=dense tissue).
+        </figcaption>
+      </figure>
+    </div>
+	
+	<div class="card">
+      <figure>
+        <img src="assets/anim_dova20_02.gif" alt="3D animated rendering GIF" width="500" />
+        <figcaption>
+          Case3 - 3D volume rendering (green=normal lung, cyan=airways, red=vessels, yellow=isolated cavities, orange=airway-connected cavities, pink=nodules, blue=dense tissue).
+        </figcaption>
+      </figure>
+    </div>
+	
+	<div class="card">
+      <figure>
+        <img src="assets/anim_ax_dova.gif" alt="Axial slice example GIF" width="500" />
+        <figcaption>
+          Case3 - axial slice examples (green=normal lung, cyan=airways, red=vessels, yellow=isolated cavities, orange=airway-connected cavities, pink=nodules, blue=dense tissue).
+        </figcaption>
+      </figure>
+    </div>
+	
+	<div class="card">
+      <figure>
+        <img src="assets/anim_kei21.gif" alt="3D animated rendering GIF" width="500" />
+        <figcaption>
+          Case4 (pneumothorax) - 3D volume rendering (green=normal lung, cyan=airways, red=vessels, yellow=isolated cavities, orange=airway-connected cavities, pink=nodules, blue=dense tissue).
+        </figcaption>
+      </figure>
+    </div>
+	
+	<div class="card">
+      <figure>
+        <img src="assets/anim_ax_kei21.gif" alt="Axial slice example GIF" width="500" />
+        <figcaption>
+          Case4 (pneumothorax) - axial slice examples (green=normal lung, cyan=airways, red=vessels, yellow=isolated cavities, orange=airway-connected cavities, pink=nodules, blue=dense tissue).
+        </figcaption>
+      </figure>
+    </div>
+	
+	<div class="card">
+      <figure>
+        <img src="assets/anim_niak19.gif" alt="3D animated rendering GIF" width="500" />
+        <figcaption>
+          Case5 - 3D volume rendering (green=normal lung, cyan=airways, red=vessels, yellow=isolated cavities, orange=airway-connected cavities, pink=nodules, blue=dense tissue).
+        </figcaption>
+      </figure>
+    </div>
+	
+	<div class="card">
+      <figure>
+        <img src="assets/anim_ax_niak19.gif" alt="Axial slice example GIF" width="500" />
+        <figcaption>
+          Case5 - axial slice examples (green=normal lung, cyan=airways, red=vessels, yellow=isolated cavities, orange=airway-connected cavities, pink=nodules, blue=dense tissue).
+        </figcaption>
+      </figure>
+    </div>
+	
+	<div class="card">
+      <figure>
+        <img src="assets/anim_sal14.gif" alt="3D animated rendering GIF" width="500" />
+        <figcaption>
+          Case6 - 3D volume rendering (green=normal lung, cyan=airways, red=vessels, yellow=isolated cavities, orange=airway-connected cavities, pink=nodules, blue=dense tissue).
+        </figcaption>
+      </figure>
+    </div>
+	
+	<div class="card">
+      <figure>
+        <img src="assets/anim_ax_sal14.gif" alt="Axial slice example GIF" width="500" />
+        <figcaption>
+          Case6 - axial slice examples (green=normal lung, cyan=airways, red=vessels, yellow=isolated cavities, orange=airway-connected cavities, pink=nodules, blue=dense tissue).
+        </figcaption>
+      </figure>
+    </div>
+	
+	<div class="card">
+      <figure>
+        <img src="assets/anim_siso22.gif" alt="3D animated rendering GIF" width="500" />
+        <figcaption>
+          Case7 - 3D volume rendering (green=normal lung, cyan=airways, red=vessels, yellow=isolated cavities, orange=airway-connected cavities, pink=nodules, blue=dense tissue).
+        </figcaption>
+      </figure>
+    </div>
+	
+	<div class="card">
+      <figure>
+        <img src="assets/anim_ax_siso22_10.gif" alt="Axial slice example GIF" width="500" />
+        <figcaption>
+          Case7 - axial slice examples (green=normal lung, cyan=airways, red=vessels, yellow=isolated cavities, orange=airway-connected cavities, pink=nodules, blue=dense tissue).
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- OPTIONAL: CITATION -->
+    <h2>Citation</h2>
+    <div class="card">
+      <pre style="white-space: pre-wrap; margin:0;">
+@inproceedings{Fetita2026Tuberculosis,
+  title     = {Lesion Segmentation and CT biomarkers Definition for Tuberculosis Assessment and Follow-up},
+  author    = {Catalin Fetita, Usman Musa Nuhu, Rezkellah-N. Khiati, Maria Trocan and Pierre-Yves Brillet},
+  booktitle = {SPIE Medical Imaging},
+  year      = {2026}
+}
+      </pre>
+    </div>
+
+    <div class="footer">
+      © <span id="year"></span> Catalin FETITA • Built with GitHub Pages
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastUpdate").textContent = new Date().toISOString().slice(0,10);
+  </script>
+</body>
+</html>
